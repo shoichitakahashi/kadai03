@@ -1,2 +1,345 @@
 kadai03
 =======
+@@ -0,0 +1,381 @@
+@charset "utf-8";
+
+/* ブラウザサイズを左上に表示*/
+#size{
+    position: absolute;
+    top:5px;
+    left:5px;
+
+}
+
+body{
+    background:#888;
+}
+
+ul,li,p{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+#wrapper{
+    background: #555;
+    width:1000px;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+#logo{
+    color:#999;
+    font-size:16px;
+    margin:0px 0px;
+    height:150px;
+    padding:50px 20px;
+    width:160px;
+    font-weight: bold;
+}
+
+#logo span{
+    float:left;
+    padding:0;
+    width:50%;
+    margin:-3px 10px;
+    font-size:16px;
+    line-height: 22px;
+}
+
+#logo img{
+    width:30px;
+    float:left;
+}
+
+#leftColumn{
+    width:200px;
+    float:left;
+}
+
+#sideMenu li{
+    padding-left:15px;
+    background:#aaa;
+    margin-bottom:1px;
+    height:40px;
+    line-height: 40px;
+    color:white;
+}
+
+#sideMenu li:after{
+    content:">";
+    float:right;
+    margin-right:10px;
+}
+
+#rightColumn{
+    width:800px;
+    float:right;
+}
+
+#rightColumn div:first-child{
+    width:600px;
+    height:250px;
+    padding:0;
+    margin:0;
+}
+
+
+.boxStyle{
+    float:left;
+    width:200px;
+    height:210px;
+    border:0px solid #aaa;
+    text-align:center;
+    color:white;
+    font-size:50px;
+    padding:20px 0;
+}
+
+.boxStyle i{
+    font-size:50px;
+    display:block;
+    padding:20px 0;
+}
+
+
+.boxStyle p{
+    font-size:11px;
+}
+
+#ad{
+    font-size:30px;
+    color:#999;
+    height:180px;
+    padding:30px 0 40px 0;
+}
+
+#ad p{
+    background:#888;
+    border-radius:3px;
+    padding:5px 10px;
+    margin:5px 40px;
+    color:white;
+    display:block;
+    text-align: center;
+    font-size:13px;
+}
+
+#banner{
+    background:url('../img/adGlassPC.png') no-repeat;
+}
+
+/* タブレット 480〜767px */
+@media screen and (max-width: 767px){
+/*スマホ、タブレット*/
+#wrapper{
+    width: 100%;
+}
+
+/*header*/
+#logo{
+    width: 60%;
+    height: 0px;
+    padding: 10px 5px;
+
+}
+
+#logo span{
+     margin:5px 0px;
+     padding-bottom: 15px;
+}
+
+#logo img{
+    width: 15px;
+}
+
+/*header*/
+
+/*nav*/
+#leftColumn{
+    width:100%;
+    text-align: center;
+}
+
+ul{
+display: -webkit-box;
+width: 100%;
+}
+
+#sideMenu li{
+    -webkit-box-flex: 1;
+    width: 25%;
+    margin-bottom: 0px;
+}
+
+#sideMenu li:after{
+    content:"";
+    /*clear: both;*/
+    margin-right:0px;
+}
+/*nav*/
+/*スマホ、タブレット*/
+
+/*contents*/
+#rightColumn{
+    width:100%;
+}
+
+/*2カラム*/
+/*goole class*/
+#rightColumn div:first-child{
+    width:50%;
+    height: 150px;
+    background-color: #fff;
+}
+#banner{
+    background:url('../img/adGlassSP.png') no-repeat;
+    background-position: center;
+
+
+}
+
+
+/*goole class*/
+
+/*google downlod*/
+#rightColumn div:nth-child(2){
+   width:50%;
+   height: 150px;
+
+}
+
+#ad{
+    height:75px;
+    font-size:15px;
+    padding:0px;
+
+}
+
+#ad p{
+    margin:20px 50px;
+    padding:5px 0px;
+
+
+}
+
+#chromeIcon {
+    width: 60px;
+    height:60px;
+    margin-top: 10px;
+    margin-left: 115px;
+    margin-right: 0 auto;
+    display: block;
+}
+
+/*google downlod*/
+/*2カラム*/
+
+/*icon*/
+.boxStyle {
+    width:25%;
+    height:150px;
+    font-size:40px;
+    padding: 0px;
+}
+
+.boxStyle i{
+    padding:15px;
+    font-size:35px;
+
+}
+
+.boxStyle p{
+    font-size:10px;
+}
+/*icon*/
+
+
+}
+
+/* スマホ 0〜479px */
+@media screen and (max-width: 479px){
+#wrapper{
+    width: 100%;/*　2カラム　*/
+
+}
+
+#logo{
+    width: 80%;
+}
+
+/*google downrod*/
+
+#chromeIcon {
+    margin-top: 10px;
+    margin-left: 70px;
+
+
+}
+
+#ad{
+    height:75px;
+    font-size:15px;
+    padding:0px;
+    text-align: center;
+}
+
+#ad p{
+    width: 100px;
+    margin:30px 0px;
+    padding:5px 5px;
+    position: relative;
+    left: 50px;
+    top:-20px;
+
+
+}
+
+/*flat*/
+.boxStyle {
+    width:100%;
+    height:40px;
+    font-size:20px;
+
+
+}
+
+/*議事クラス*/
+div .boxStyle{
+    text-align: left;
+    padding-top: 20px;
+    }
+
+
+
+.boxStyle i{
+    font-size:20px;
+    text-align: left;
+    display: inline;
+
+}
+
+
+.boxStyle p{
+    position: relative;
+    top:-20px;
+    left: 90px;
+    font-size: 10px;
+
+
+}
+
+#rightColumn div p:after{
+    content: ">";
+    position: absolute;
+    top: -5px;
+    left: 300px;
+}
+
+
+
+
+}
+
+
+
